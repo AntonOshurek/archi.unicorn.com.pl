@@ -1,0 +1,28 @@
+{
+  "name": "archi.unicorn.com.pl",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint:prettier": "prettier --check .",
+    "lint:styles": "stylelint \"**/*.{css,astro}\" --ignore-path .stylelintignore --allow-empty-input",
+    "lint": "npm run lint:prettier && npm run lint:styles",
+    "test": "npm run lint"
+  },
+  "devDependencies": {
+    "postcss-html": "^1.8.0",
+    "prettier": "^3.6.2",
+    "prettier-plugin-astro": "^0.14.1",
+    "stylelint": "^16.25.0",
+    "stylelint-config-standard": "^39.0.1",
+    "stylelint-order": "^7.0.0"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/sitemap": "^3.7.0",
+    "astro": "^5.17.1"
+  }
+}
