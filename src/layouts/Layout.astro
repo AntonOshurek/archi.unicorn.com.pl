@@ -1,6 +1,7 @@
 ---
 //STYLES
 import '@styles/index.css';
+import './styles.css';
 //SEO
 import Head from '@components/seo/head.astro';
 
@@ -10,10 +11,17 @@ interface Props {
   keywords: string;
   metaImage: string;
   additionalBodyClass?: string;
+  isHeaderFixed?: boolean;
 }
 
-const { metaTitle, metaDescription, additionalBodyClass, metaImage, keywords } =
-  Astro.props;
+const {
+  metaTitle,
+  metaDescription,
+  additionalBodyClass,
+  metaImage,
+  keywords,
+  isHeaderFixed,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -25,7 +33,8 @@ const { metaTitle, metaDescription, additionalBodyClass, metaImage, keywords } =
     keywords={keywords}
   />
 
-  <body>
+  <body class=`body ${additionalBodyClass ? additionalBodyClass : ''}`>
+    <!--header-->
     <slot />
   </body>
 </html>
