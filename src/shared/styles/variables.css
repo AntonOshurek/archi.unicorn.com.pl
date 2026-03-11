@@ -4,4 +4,12 @@
   --standard-black: #000;
   --text-color: #1a1c22;
   --background-color: #fff;
+
+  /* INDEXING VALUES */
+  --header-index: 3;
+  --header-logo-index: 1;
+  --header-menu-btn-index: 1;
+
+  /* SIZES */
+  --basic-side-padding: 20px;
 }

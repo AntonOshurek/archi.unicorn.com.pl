@@ -4,6 +4,8 @@ import '@styles/index.css';
 import './styles.css';
 //SEO
 import Head from '@components/seo/head.astro';
+//COMPONENTS
+import Header from '@components/global/header/header.astro';
 
 interface Props {
   metaTitle: string;
@@ -34,7 +36,7 @@ const {
   />
 
   <body class=`body ${additionalBodyClass ? additionalBodyClass : ''}`>
-    <!--header-->
+    <Header isFixed={true} />
     <slot />
   </body>
 </html>

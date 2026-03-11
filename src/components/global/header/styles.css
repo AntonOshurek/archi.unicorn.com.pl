@@ -1,0 +1,28 @@
+.header {
+  z-index: var(--header-index);
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+
+  .header__wrap {
+    padding: var(--basic-side-padding);
+  }
+}
+
+.header__wrap {
+  position: relative;
+  display: grid;
+  align-self: center;
+  grid-template-columns: max-content 1fr;
+  padding: 80px var(--basic-side-padding);
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 24px;
+}
