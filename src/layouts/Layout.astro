@@ -1,23 +1,42 @@
+---
+//STYLES
+import '@styles/index.css';
+import './styles.css';
+//SEO
+import Head from '@components/seo/head.astro';
+//COMPONENTS
+import Header from '@components/global/header/header.astro';
+
+interface Props {
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string;
+  metaImage: string;
+  additionalBodyClass?: string;
+  isHeaderFixed?: boolean;
+}
+
+const {
+  metaTitle,
+  metaDescription,
+  additionalBodyClass,
+  metaImage,
+  keywords,
+  isHeaderFixed,
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
-  <body>
+<html lang="pl">
+  <Head
+    title={metaTitle}
+    description={metaDescription}
+    image={metaImage}
+    keywords={keywords}
+  />
+
+  <body class=`body ${additionalBodyClass ? additionalBodyClass : ''}`>
+    <Header isFixed={true} />
     <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-  }
-</style>

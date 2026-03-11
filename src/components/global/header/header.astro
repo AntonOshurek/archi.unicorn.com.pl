@@ -1,0 +1,17 @@
+---
+//STYLES
+import './styles.css';
+//COMPONENTS
+
+interface Props {
+  isFixed?: boolean;
+}
+
+const { isFixed } = Astro.props;
+---
+
+<header class=`header ${isFixed && 'header--fixed'}`>
+  <div class="header__wrap container">
+    <h1 class="header__title">UNICORN ARCHITECTURE</h1>
+  </div>
+</header>
