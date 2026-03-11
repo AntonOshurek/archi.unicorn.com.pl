@@ -1,29 +1,30 @@
 ---
 //STYLES
 import '@styles/index.css';
+//SEO
+import Head from '@components/seo/head.astro';
+
+interface Props {
+  metaTitle: string;
+  metaDescription: string;
+  keywords: string;
+  metaImage: string;
+  additionalBodyClass?: string;
+}
+
+const { metaTitle, metaDescription, additionalBodyClass, metaImage, keywords } =
+  Astro.props;
 ---
 
 <!doctype html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.ico" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/favicons/favicon_32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="64x64"
-      href="/favicons/favicon_64.png"
-    />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro Basics</title>
-  </head>
+  <Head
+    title={metaTitle}
+    description={metaDescription}
+    image={metaImage}
+    keywords={keywords}
+  />
+
   <body>
     <slot />
   </body>
