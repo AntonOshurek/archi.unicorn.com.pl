@@ -1,0 +1,10 @@
+.logo {
+  z-index: var(--header-logo-index);
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--standard-white);
+}
+
+.logo__nav-open {
+  color: var(--standard-black);
+}

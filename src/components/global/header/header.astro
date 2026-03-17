@@ -2,6 +2,9 @@
 //STYLES
 import './styles.css';
 //COMPONENTS
+import Logo from '@components/ui/logo/logo.astro';
+import OpenNavButton from '@components/global/nav/open-nav-button/open-nav-button.astro';
+import Nav from '@components/global/nav/nav.astro';
 
 interface Props {
   isFixed?: boolean;
@@ -12,6 +15,10 @@ const { isFixed } = Astro.props;
 
 <header class=`header ${isFixed && 'header--fixed'}`>
   <div class="header__wrap container">
-    <h1 class="header__title">UNICORN ARCHITECTURE</h1>
+    <div class="header__controls">
+      <Logo />
+      <OpenNavButton />
+      <Nav />
+    </div>
   </div>
 </header>
