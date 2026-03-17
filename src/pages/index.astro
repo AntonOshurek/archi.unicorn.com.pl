@@ -1,6 +1,8 @@
 ---
 //LAYOUTS
 import Layout from '@layouts/Layout.astro';
+//COMPONENTS
+import IndexBanner from '@components/ui/index-banner/index-banner.astro';
 ---
 
 <Layout
@@ -11,5 +13,7 @@ import Layout from '@layouts/Layout.astro';
   additionalBodyClass="body--index"
   isHeaderFixed={true}
 >
-  <main class="main main--index"></main>
+  <main class="main main--index">
+    <IndexBanner />
+  </main>
 </Layout>
