@@ -2,6 +2,10 @@
   z-index: var(--header-logo-index);
   font-weight: 400;
   font-size: 24px;
+  color: var(--standard-black);
+}
+
+.logo--index-page {
   color: var(--standard-white);
 }
 

@@ -8,12 +8,15 @@ import Nav from '@components/global/nav/nav.astro';
 
 interface Props {
   isFixed?: boolean;
+  onlyDesktopFixed?: boolean;
 }
 
-const { isFixed } = Astro.props;
+const { isFixed, onlyDesktopFixed } = Astro.props;
+
+const computedClasses = `${isFixed ? ' header--fixed' : ''}${onlyDesktopFixed ? ' header--only-desktop-fixed' : ''}`;
 ---
 
-<header class=`header ${isFixed && 'header--fixed'}`>
+<header class=`header${computedClasses}`>
   <div class="header__wrap container">
     <div class="header__controls">
       <Logo />

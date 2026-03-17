@@ -13,7 +13,7 @@ interface Props {
   keywords: string;
   metaImage: string;
   additionalBodyClass?: string;
-  isHeaderFixed?: boolean;
+  isHeaderFixed?: 'always' | 'desktop';
 }
 
 const {
@@ -36,7 +36,10 @@ const {
   />
 
   <body class=`body ${additionalBodyClass ? additionalBodyClass : ''}`>
-    <Header isFixed={true} />
+    <Header
+      isFixed={isHeaderFixed === 'always'}
+      onlyDesktopFixed={isHeaderFixed === 'desktop'}
+    />
     <slot />
   </body>
 </html>

@@ -8,9 +8,16 @@
   position: fixed;
   top: 0;
   background-color: transparent;
+}
 
-  .header__wrap {
-    padding: var(--basic-side-padding);
+.header--only-desktop-fixed {
+  position: fixed;
+  top: 0;
+  background-color: transparent;
+
+  @media (width <= 900px) {
+    position: static;
+    background-color: var(--background-color);
   }
 }
 
@@ -18,7 +25,7 @@
   display: grid;
   align-self: center;
   grid-template-columns: max-content 1fr;
-  padding: 80px var(--basic-side-padding);
+  padding: var(--basic-side-padding);
 }
 
 .header__controls {

@@ -1,5 +1,10 @@
 ---
+//STYLES
 import './style.css';
+
+const isIndexPage = Astro.url.pathname === '/';
 ---
 
-<h1 class="logo">UNICORN ARCHITECTURE</h1>
+<h1 class=`logo ${isIndexPage ? 'logo--index-page' : ''}`>
+  UNICORN ARCHITECTURE
+</h1>
