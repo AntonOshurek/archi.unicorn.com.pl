@@ -19,9 +19,9 @@ interface Props {
 const {
   metaTitle,
   metaDescription,
-  additionalBodyClass,
-  metaImage,
   keywords,
+  metaImage,
+  additionalBodyClass,
   isHeaderFixed,
 } = Astro.props;
 ---
@@ -35,8 +35,10 @@ const {
     keywords={keywords}
   />
 
-  <body class=`body ${additionalBodyClass ? additionalBodyClass : ''}`>
-    <Header isFixed={true} />
+  <body
+    class=`body ${additionalBodyClass ? additionalBodyClass : ''} ${isHeaderFixed ? 'body--fixed-header' : 'container'}`
+  >
+    <Header isFixed={isHeaderFixed} />
     <slot />
   </body>
 </html>

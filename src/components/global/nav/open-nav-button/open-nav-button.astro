@@ -1,0 +1,62 @@
+---
+import './style.css';
+---
+
+<button class="open-nav-button"></button>
+
+<script>
+  const openNavButton = document.querySelector('.open-nav-button');
+  const logoIcon = document.querySelector('.logo');
+  const navigation = document.querySelector('.nav');
+  // const headerTitle = document.querySelector('.header__title');
+  const body = document.querySelector('.body');
+  let menuStatus: boolean;
+
+  const toggleMobileMenu = () => {
+    menuStatus ? closeMobileMenu() : openMobileMenu();
+  };
+
+  const onBackgroundClick = (evt) => {
+    if (evt.target.parentElement.tagName === 'HTML') {
+      closeMobileMenu();
+    }
+  };
+
+  const onEscPress = (evt: KeyboardEvent) => {
+    if (evt.key === 'Escape') {
+      closeMobileMenu();
+    }
+  };
+
+  const onPopState = () => {
+    if (menuStatus) {
+      closeMobileMenu();
+    }
+  };
+
+  function openMobileMenu() {
+    navigation!.classList.add('nav--open');
+    body!.classList.add('body--menu-open');
+    logoIcon!.classList.add('logo__nav-open');
+    menuStatus = true;
+
+    body!.addEventListener('click', onBackgroundClick);
+    document.addEventListener('keydown', onEscPress);
+
+    history.pushState({ menu: 'open' }, '');
+    window.addEventListener('popstate', onPopState);
+  }
+
+  function closeMobileMenu() {
+    navigation!.classList.remove('nav--open');
+    body!.classList.remove('body--menu-open');
+    logoIcon!.classList.remove('logo__nav-open');
+    menuStatus = false;
+
+    body!.removeEventListener('click', onBackgroundClick);
+    document.removeEventListener('keydown', onEscPress);
+    window.removeEventListener('popstate', onPopState);
+  }
+
+  openNavButton!.addEventListener('click', toggleMobileMenu);
+</script>

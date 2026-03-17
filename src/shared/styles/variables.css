@@ -2,13 +2,14 @@
   /* COLORS */
   --standard-white: #fff;
   --standard-black: #000;
-  --text-color: #1a1c22;
+  --primary-text-color: #000;
+  --secondary-text-color: #999;
   --background-color: #fff;
 
   /* INDEXING VALUES */
   --header-index: 3;
   --header-logo-index: 1;
-  --header-menu-btn-index: 1;
+  --open-nav-button-index: 1;
 
   /* SIZES */
   --basic-side-padding: 20px;

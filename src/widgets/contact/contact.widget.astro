@@ -1,0 +1,19 @@
+---
+//ASTRO
+import { Image } from 'astro:assets';
+//COMPONENTS
+import ContactInfo from '@components/ui/contact-info/contact-info.astro';
+//STYLES
+import './style.css';
+---
+
+<section class="contact-widget">
+  <Image
+    class="contact-widget__banner"
+    src="https://archi.unicorn.com.pl/img/projects/domy-blizniaki/domy-blizniaki_1.webp"
+    alt="Dwa nowoczesne domy bliźniacze z drewnianą elewacją – jeden jasny, drugi ciemny, z wejściem pośrodku i małym drzewem przed budynkiem"
+    width={300}
+    height={300}
+  />
+  <ContactInfo />
+</section>

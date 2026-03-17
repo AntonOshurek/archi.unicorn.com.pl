@@ -1,0 +1,21 @@
+.nav__item {
+}
+
+.nav__link {
+  position: relative;
+  padding: 8px 0;
+  font-weight: 400;
+  font-size: 26px;
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  user-select: none;
+}
+
+.nav__link--current {
+}
+
+.nav__link:not(.nav__link--current):hover,
+.nav__link:not(.nav__link--current):focus {
+  color: var(--primary-text-color);
+  transition: 0.2s all ease-in;
+}
