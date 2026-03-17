@@ -10,17 +10,6 @@
   background-color: transparent;
 }
 
-.header--only-desktop-fixed {
-  position: fixed;
-  top: 0;
-  background-color: transparent;
-
-  @media (width <= 900px) {
-    position: static;
-    background-color: var(--background-color);
-  }
-}
-
 .header__wrap {
   display: grid;
   align-self: center;

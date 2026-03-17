@@ -1,12 +1,15 @@
 .body {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content 1fr;
-  margin: 0;
-  padding: 0;
+  grid-template-columns: 1fr minmax(0, 600px);
+  grid-template-rows: 1fr;
   min-height: 100vh;
   background-color: var(--standard-white);
+
+  @media (width <= 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
 }
 
 .body--menu-open {
@@ -27,6 +30,7 @@
   }
 }
 
-.body--index {
+.body--fixed-header {
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
 }
