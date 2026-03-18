@@ -1,7 +1,7 @@
 .header-title {
   font-weight: 400;
   font-size: 27px;
-  text-transform: capitalize;
+  text-transform: lowercase;
   color: var(--secondary-text-color);
 }
 

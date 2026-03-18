@@ -14,4 +14,5 @@
 
 .main--basic {
   padding: var(--basic-side-padding);
+  padding-top: calc(var(--basic-side-padding) + 15px);
 }

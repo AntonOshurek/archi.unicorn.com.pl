@@ -11,7 +11,7 @@ interface Props {
 const { title, isLink = false, href = '/' } = Astro.props;
 ---
 
-<h1 slot="header-title" class="header-title">
+<h1 class="header-title">
   {
     isLink ? (
       <a href={href} class="header-title__link">

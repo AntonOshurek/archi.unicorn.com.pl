@@ -26,5 +26,7 @@
 }
 
 .header__titles {
+  display: flex;
+  align-items: center;
   padding: var(--basic-side-padding);
 }
