@@ -13,11 +13,20 @@
 .header__wrap {
   display: grid;
   align-self: center;
-  grid-template-columns: max-content 1fr;
+  grid-auto-rows: max-content max-content;
+  grid-template-columns: max-content;
   padding: var(--basic-side-padding);
+  gap: 40px;
 }
 
 .header__controls {
   position: relative;
   max-width: max-content;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: 27px;
+  text-transform: capitalize;
+  color: var(--secondary-text-color);
 }
