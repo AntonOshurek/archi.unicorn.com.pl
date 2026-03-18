@@ -1,0 +1,15 @@
+.header-title {
+  font-weight: 400;
+  font-size: 27px;
+  text-transform: lowercase;
+  color: var(--secondary-text-color);
+}
+
+.header-title__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-title__link:hover {
+  color: var(--primary-text-color);
+}

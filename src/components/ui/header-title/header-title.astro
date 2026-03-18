@@ -1,0 +1,24 @@
+---
+//STYLES
+import './style.css';
+
+interface Props {
+  title: string;
+  isLink?: boolean;
+  href?: string;
+}
+
+const { title, isLink = false, href = '/' } = Astro.props;
+---
+
+<h1 class="header-title">
+  {
+    isLink ? (
+      <a href={href} class="header-title__link">
+        {title}
+      </a>
+    ) : (
+      title
+    )
+  }
+</h1>

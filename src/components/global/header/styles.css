@@ -1,5 +1,4 @@
 .header {
-  z-index: var(--header-index);
   width: 100%;
   background-color: var(--background-color);
 }
@@ -7,17 +6,27 @@
 .header--fixed {
   position: fixed;
   top: 0;
+  z-index: 1;
   background-color: transparent;
 }
 
 .header__wrap {
   display: grid;
   align-self: center;
-  grid-template-columns: max-content 1fr;
+  grid-auto-rows: max-content max-content;
+  grid-template-columns: max-content;
   padding: var(--basic-side-padding);
+  gap: calc(var(--basic-side-padding));
 }
 
 .header__controls {
   position: relative;
+  z-index: var(--header-controls-index);
   max-width: max-content;
+}
+
+.header__titles {
+  display: flex;
+  align-items: center;
+  padding: var(--basic-side-padding);
 }

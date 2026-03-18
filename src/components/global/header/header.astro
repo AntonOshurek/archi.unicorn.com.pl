@@ -23,4 +23,7 @@ const computedClasses = `${isFixed ? ' header--fixed' : ''}`;
       <Nav />
     </div>
   </div>
+  <div class="header__titles">
+    <slot name="title" />
+  </div>
 </header>

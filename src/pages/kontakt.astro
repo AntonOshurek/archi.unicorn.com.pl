@@ -3,6 +3,8 @@
 import Layout from '@layouts/Layout.astro';
 //WIDGETS
 import ContactWidget from '@widgets/contact/contact.widget.astro';
+//COMPONENTS
+import HeaderTitle from '@components/ui/header-title/header-title.astro';
 ---
 
 <Layout
@@ -11,6 +13,8 @@ import ContactWidget from '@widgets/contact/contact.widget.astro';
   metaImage=""
   keywords="unicorn, poznań, architektura, adres, kontakt"
 >
+  <HeaderTitle slot="header-title" isLink={false} title="kontakt" />
+
   <main class="main main--basic">
     <ContactWidget />
   </main>

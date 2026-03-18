@@ -28,12 +28,6 @@ import './style.css';
     }
   };
 
-  const onPopState = () => {
-    if (menuStatus) {
-      closeMobileMenu();
-    }
-  };
-
   function openMobileMenu() {
     navigation!.classList.add('nav--open');
     body!.classList.add('body--menu-open');
@@ -42,9 +36,6 @@ import './style.css';
 
     body!.addEventListener('click', onBackgroundClick);
     document.addEventListener('keydown', onEscPress);
-
-    history.pushState({ menu: 'open' }, '');
-    window.addEventListener('popstate', onPopState);
   }
 
   function closeMobileMenu() {
@@ -55,7 +46,6 @@ import './style.css';
 
     body!.removeEventListener('click', onBackgroundClick);
     document.removeEventListener('keydown', onEscPress);
-    window.removeEventListener('popstate', onPopState);
   }
 
   openNavButton!.addEventListener('click', toggleMobileMenu);

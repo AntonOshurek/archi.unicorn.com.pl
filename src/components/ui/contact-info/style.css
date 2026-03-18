@@ -1,0 +1,26 @@
+.contacts-info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.contacts-info__item {
+}
+
+.contacts-info__title {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--primary-text-color);
+}
+
+.contacts-info__value {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  text-decoration: none;
+  text-transform: none;
+  color: var(--secondary-text-color);
+}
