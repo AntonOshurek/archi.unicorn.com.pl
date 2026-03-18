@@ -1,5 +1,4 @@
 .header {
-  z-index: var(--header-index);
   width: 100%;
   background-color: var(--background-color);
 }
@@ -16,12 +15,17 @@
   grid-auto-rows: max-content max-content;
   grid-template-columns: max-content;
   padding: var(--basic-side-padding);
-  gap: 40px;
+  gap: calc(var(--basic-side-padding));
 }
 
 .header__controls {
   position: relative;
+  z-index: var(--header-controls-index);
   max-width: max-content;
+}
+
+.header__titles {
+  padding: var(--basic-side-padding);
 }
 
 .header__title {

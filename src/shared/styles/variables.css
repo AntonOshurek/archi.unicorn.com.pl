@@ -7,9 +7,11 @@
   --background-color: #fff;
 
   /* INDEXING VALUES */
-  --header-index: 3;
+  --body-overlay-index: 1;
+  --header-controls-index: 1;
   --header-logo-index: 1;
   --open-nav-button-index: 1;
+  --nav-index: 1;
 
   /* SIZES */
   --basic-side-padding: 20px;

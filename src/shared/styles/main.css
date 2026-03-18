@@ -13,15 +13,5 @@
 }
 
 .main--basic {
-  /* display: grid; */
-  /* grid-template-columns: 1fr minmax(0, 600px); */
-
-  /* display: flex; */
-  /* align-items: flex-start; */
-  /* justify-content: flex-end; */
   padding: var(--basic-side-padding);
-
-  /* @media (width <= 900px) { */
-  /*  grid-template-columns: 1fr; */
-  /* } */
 }

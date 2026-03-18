@@ -2,6 +2,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  z-index: var(--nav-index);
   opacity: 0;
   pointer-events: none;
   user-select: none;
