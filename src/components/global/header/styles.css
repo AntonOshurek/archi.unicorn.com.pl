@@ -27,10 +27,3 @@
 .header__titles {
   padding: var(--basic-side-padding);
 }
-
-.header__title {
-  font-weight: 400;
-  font-size: 27px;
-  text-transform: capitalize;
-  color: var(--secondary-text-color);
-}

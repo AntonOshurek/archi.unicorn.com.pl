@@ -38,7 +38,10 @@ const {
   <body
     class=`body ${additionalBodyClass ? additionalBodyClass : ''} ${isHeaderFixed ? 'body--fixed-header' : 'container'}`
   >
-    <Header isFixed={isHeaderFixed} />
+    <Header isFixed={isHeaderFixed}>
+      <slot name="header-title" slot="title" />
+    </Header>
+
     <slot />
   </body>
 </html>
