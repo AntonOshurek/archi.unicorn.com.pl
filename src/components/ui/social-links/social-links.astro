@@ -1,0 +1,51 @@
+---
+//ICONS
+import FacebookIcon from './icons/facebook-icon.astro';
+import InstagramIcon from './icons/instagram-icon.astro';
+import PinterestIcon from './icons/pinterest-icon.astro';
+//STYLES
+import './social-links.css';
+
+const iconSize = 20;
+---
+
+<ul class="social-links">
+  <li class="social-links__item">
+    <a
+      class="social-links__link"
+      href="https://facebook.com/your-page"
+      aria-label="Facebook"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="visually-hidden">Przejdź do Facebooka</span>
+      <FacebookIcon iconSize={iconSize} />
+    </a>
+  </li>
+
+  <li class="social-links__item">
+    <a
+      class="social-links__link"
+      href="https://instagram.com/your-username"
+      aria-label="Instagram"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="visually-hidden">Przejdź do Instagrama</span>
+      <InstagramIcon iconSize={iconSize} />
+    </a>
+  </li>
+
+  <li class="social-links__item">
+    <a
+      class="social-links__link"
+      href="https://pinterest.com/your-username"
+      aria-label="Pinterest"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="visually-hidden">Przejdź do Pinteresta</span>
+      <PinterestIcon iconSize={iconSize} />
+    </a>
+  </li>
+</ul>
