@@ -2,7 +2,7 @@
 //LAYOUTS
 import Layout from '@layouts/layout.astro';
 //WIDGETS
-
+import Projects from '@widgets/projects/projects.widget.astro';
 //COMPONENTS
 import HeaderTitle from '@components/ui/header-title/header-title.astro';
 ---
@@ -15,5 +15,7 @@ import HeaderTitle from '@components/ui/header-title/header-title.astro';
 >
   <HeaderTitle slot="header-title" isLink={false} title="projekty" />
 
-  <main class="main main--basic"></main>
+  <main class="main main--basic">
+    <Projects />
+  </main>
 </Layout>

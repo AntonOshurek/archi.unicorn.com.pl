@@ -1,0 +1,45 @@
+.projects__card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.projects__link {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  gap: 10px;
+}
+
+.projects__info {
+  position: absolute;
+  bottom: -50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.projects__title {
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: var(--primary-text-color);
+
+  @media (width <= 900px) {
+    font-size: 20px;
+  }
+}
+
+.projects__image {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

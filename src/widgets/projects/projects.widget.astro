@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+//COMPONENTS
+import ProjectCard from '@components/ui/project-card/project-card.astro';
+//STYLES
+import './projects.widget.css';
+
+const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
+---
+
+<ul class="projects">
+  {
+    projects.map((project) => {
+      return <ProjectCard project={project} />;
+    })
+  }
+</ul>
