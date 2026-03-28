@@ -9,10 +9,18 @@ import './projects.widget.css';
 const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
 ---
 
-<ul class="projects">
-  {
-    projects.map((project) => {
-      return <ProjectCard project={project} />;
-    })
-  }
-</ul>
+<section class="projects">
+  <h2 class="visually-hidden">Lista projektów</h2>
+
+  <ul class="projects__list">
+    {
+      projects.map((project) => {
+        return (
+          <li>
+            <ProjectCard project={project} />{' '}
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

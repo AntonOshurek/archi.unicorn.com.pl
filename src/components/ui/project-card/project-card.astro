@@ -2,8 +2,6 @@
 import type { CollectionEntry } from 'astro:content';
 //STYLES
 import './project-card.css';
-//VARIABLES
-// import { ROUTING } from '@variables/routing';
 
 interface Props {
   project: CollectionEntry<'projects'>;
@@ -12,19 +10,19 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<li class="projects__card">
-  <a class="projects__link" href=`projekt/${project.slug}/index.html`>
-    <div class="projects__info">
-      <h3 class="projects__title">{project.data.title}</h3>
-    </div>
+<article class="projects-card">
+  <!--<a class="projects__link" href=`projekt/${project.slug}/index.html`> link</a>-->
 
-    <img
-      class="projects__image lazyload"
-      loading="lazy"
-      width="100"
-      height="300"
-      src={project.data.previewImagePath}
-      alt="budynek retail parku, zieliony drzewa oraz spacerujące ludzie."
-    />
-  </a>
-</li>
+  <div class="projects-card__info-block">
+    <h3 class="projects-card__title">{project.data.title}</h3>
+  </div>
+
+  <img
+    class="projects-card__image lazyload"
+    loading="lazy"
+    width="100"
+    height="300"
+    src={project.data.previewImagePath}
+    alt={`${project.data.title} ${project.data.description}`}
+  />
+</article>
