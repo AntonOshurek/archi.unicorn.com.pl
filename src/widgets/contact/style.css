@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   max-width: 100%;
-  gap: 20px;
+  gap: 50px;
 }
 
 .contact-widget__banner {

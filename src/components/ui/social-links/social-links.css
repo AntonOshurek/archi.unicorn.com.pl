@@ -1,0 +1,18 @@
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type: none;
+}
+
+.social-links__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links__link {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: inherit;
+}
