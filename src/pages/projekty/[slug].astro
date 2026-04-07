@@ -1,0 +1,53 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+//LAYOUT
+import Layout from '@layouts/layout.astro';
+//WIDGETS
+// import Project from '@components/widgets/project/project.astro';
+//COMPONENTS
+import HeaderTitle from '@components/ui/header-title/header-title.astro';
+
+export const getStaticPaths = async () => {
+  const posts = await getCollection('projects');
+
+  const paths = posts.map((project) => {
+    return {
+      params: {
+        slug: project.id,
+      },
+      props: {
+        project,
+      },
+    };
+  });
+
+  return paths;
+};
+
+type Props = {
+  project: CollectionEntry<'projects'>;
+};
+
+const { project } = Astro.props;
+---
+
+<Layout
+  metaTitle={project.data.title}
+  metaDescription={project.data.description}
+  metaImage={project.data.previewImagePath}
+  keywords={project.data.keywords}
+  withTitle={true}
+>
+  <HeaderTitle
+    slot="header-title"
+    isLink={true}
+    title="Projekty"
+    href="/projekty"
+  />
+
+  <main class="main">
+    <!--<Project project={project} />-->
+    <p>main block of project page</p>
+  </main>
+</Layout>
