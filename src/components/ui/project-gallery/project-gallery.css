@@ -2,12 +2,8 @@
   width: 100%;
   height: 100%;
 
-  --swiper-navigation-color: #fff;
-  --swiper-pagination-color: #fff;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #fff;
+  --swiper-navigation-color: var(--secondary-text-color);
+  --swiper-pagination-color: var(--secondary-text-color);
 }
 
 .post__image {
