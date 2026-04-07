@@ -1,0 +1,64 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './project-gallery.css';
+//LIBS
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const projectImages = project.data.imagePath;
+const projectTitle = project.data.title;
+---
+
+<div class="swiper">
+  <div class="swiper-wrapper">
+    {
+      projectImages.map((imagePath) => (
+        <div class="swiper-slide">
+          <img class="post__image" src={imagePath} alt="" loading="lazy" />
+        </div>
+      ))
+    }
+  </div>
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+  <div class="swiper-scrollbar"></div>
+</div>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+    loop: true,
+    speed: 1000,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+  });
+</script>
