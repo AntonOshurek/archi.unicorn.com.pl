@@ -14,6 +14,7 @@ interface Props {
   metaImage: string;
   additionalBodyClass?: string;
   isHeaderFixed?: boolean;
+  defaultLayout?: boolean;
 }
 
 const {
@@ -23,6 +24,7 @@ const {
   metaImage,
   additionalBodyClass,
   isHeaderFixed,
+  defaultLayout,
 } = Astro.props;
 ---
 
@@ -36,11 +38,19 @@ const {
   />
 
   <body
-    class=`body ${additionalBodyClass ? additionalBodyClass : ''} ${isHeaderFixed ? 'body--fixed-header' : 'container'}`
+    class=`body ${defaultLayout ? 'body--default-layout' : ''} ${additionalBodyClass ? additionalBodyClass : ''} ${isHeaderFixed ? 'body--fixed-header' : 'container'}`
   >
-    <Header isFixed={isHeaderFixed}>
-      <slot name="header-title" slot="title" />
+    <Header isFixed={isHeaderFixed} isDefaultBodyLayout={defaultLayout}>
+      {!defaultLayout && <slot name="header-title" slot="title" />}
     </Header>
+
+    {
+      defaultLayout && (
+        <div class="body__titles-block">
+          <slot name="header-title" slot="title" />
+        </div>
+      )
+    }
 
     <slot />
   </body>

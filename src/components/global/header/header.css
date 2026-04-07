@@ -3,6 +3,10 @@
   background-color: var(--background-color);
 }
 
+.header--default-layout {
+  grid-column: 1/-1;
+}
+
 .header--fixed {
   position: fixed;
   top: 0;

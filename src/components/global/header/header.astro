@@ -8,11 +8,12 @@ import Nav from '@components/global/nav/nav.astro';
 
 interface Props {
   isFixed?: boolean;
+  isDefaultBodyLayout?: boolean;
 }
 
-const { isFixed } = Astro.props;
+const { isFixed, isDefaultBodyLayout } = Astro.props;
 
-const computedClasses = `${isFixed ? ' header--fixed' : ''}`;
+const computedClasses = `${isFixed ? ' header--fixed' : ''} ${isDefaultBodyLayout ? 'header--default-layout' : ''}`;
 ---
 
 <header class=`header${computedClasses}`>
@@ -23,7 +24,12 @@ const computedClasses = `${isFixed ? ' header--fixed' : ''}`;
       <Nav />
     </div>
   </div>
-  <div class="header__titles">
-    <slot name="title" />
-  </div>
+
+  {
+    !isDefaultBodyLayout && (
+      <div class="header__titles">
+        <slot name="title" />
+      </div>
+    )
+  }
 </header>

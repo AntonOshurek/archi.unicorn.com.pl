@@ -1,7 +1,7 @@
 .body {
   position: relative;
   display: grid;
-  grid-template-columns: 1fr minmax(0, 600px);
+  grid-template-columns: 1fr minmax(0, 800px);
   grid-template-rows: 1fr;
   min-height: 100vh;
   background-color: var(--standard-white);
@@ -30,7 +30,21 @@
   }
 }
 
+.body__titles-block {
+  padding: var(--basic-side-padding);
+}
+
 .body--fixed-header {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+}
+
+.body--default-layout {
+  grid-template-columns: 1fr minmax(0, 800px);
+  grid-template-rows: max-content 1fr;
+
+  @media (width <= 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+  }
 }
