@@ -1,0 +1,18 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//COMPONENTS
+import ProjectGallery from '@components/ui/project-gallery/project-gallery.astro';
+//STYLES
+import './project.widget.css';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="project-widget">
+  <ProjectGallery project={project} />
+  <!--  project info-->
+</div>

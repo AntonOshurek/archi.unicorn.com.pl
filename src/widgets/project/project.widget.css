@@ -1,0 +1,5 @@
+.project-widget {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 500px min-content;
+}

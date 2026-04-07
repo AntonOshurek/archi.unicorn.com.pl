@@ -4,7 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 //LAYOUT
 import Layout from '@layouts/layout.astro';
 //WIDGETS
-// import Project from '@components/widgets/project/project.astro';
+import Project from '@widgets/project/project.widget.astro';
 //COMPONENTS
 import HeaderTitle from '@components/ui/header-title/header-title.astro';
 
@@ -47,7 +47,6 @@ const { project } = Astro.props;
   />
 
   <main class="main">
-    <!--<Project project={project} />-->
-    <p>main block of project page</p>
+    <Project project={project} />
   </main>
 </Layout>
