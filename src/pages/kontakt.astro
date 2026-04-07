@@ -12,10 +12,11 @@ import HeaderTitle from '@components/ui/header-title/header-title.astro';
   metaDescription="Unicorn architektura - Poznań, adres firmy, informacja kontaktowa"
   metaImage=""
   keywords="unicorn, poznań, architektura, adres, kontakt"
+  withTitle={true}
 >
   <HeaderTitle slot="header-title" isLink={false} title="kontakt" />
 
-  <main class="main main--basic">
+  <main class="main">
     <ContactWidget />
   </main>
 </Layout>

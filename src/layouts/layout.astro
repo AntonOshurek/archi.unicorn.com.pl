@@ -12,8 +12,9 @@ interface Props {
   metaDescription: string;
   keywords: string;
   metaImage: string;
-  additionalBodyClass?: string;
   isHeaderFixed?: boolean;
+  withTitle?: boolean;
+  isIndexPage?: boolean;
 }
 
 const {
@@ -21,8 +22,9 @@ const {
   metaDescription,
   keywords,
   metaImage,
-  additionalBodyClass,
   isHeaderFixed,
+  withTitle = false,
+  isIndexPage,
 } = Astro.props;
 ---
 
@@ -35,12 +37,16 @@ const {
     keywords={keywords}
   />
 
-  <body
-    class=`body ${additionalBodyClass ? additionalBodyClass : ''} ${isHeaderFixed ? 'body--fixed-header' : 'container'}`
-  >
-    <Header isFixed={isHeaderFixed}>
-      <slot name="header-title" slot="title" />
-    </Header>
+  <body class=`body ${isIndexPage ? 'body--index-page' : 'container'}`>
+    <Header isFixed={isHeaderFixed} />
+
+    {
+      withTitle && (
+        <div class="body__titles-block">
+          <slot name="header-title" slot="title" />
+        </div>
+      )
+    }
 
     <slot />
   </body>

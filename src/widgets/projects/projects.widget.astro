@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+//COMPONENTS
+import ProjectCard from '@components/ui/project-card/project-card.astro';
+//STYLES
+import './projects.widget.css';
+
+const projects: CollectionEntry<'projects'>[] = await getCollection('projects');
+---
+
+<section class="projects">
+  <h2 class="visually-hidden">Lista projektów</h2>
+
+  <ul class="projects__list">
+    {
+      projects.map((project) => {
+        return (
+          <li>
+            <ProjectCard project={project} />{' '}
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>

@@ -1,0 +1,22 @@
+---
+//LAYOUTS
+import Layout from '@layouts/layout.astro';
+//WIDGETS
+import Projects from '@widgets/projects/projects.widget.astro';
+//COMPONENTS
+import HeaderTitle from '@components/ui/header-title/header-title.astro';
+---
+
+<Layout
+  metaTitle="Projekty architektoniczne | Unicorn Architecture"
+  metaDescription="Zrealizowane projekty architektoniczne Unicorn Architecture: domy prywatne, budynki użyteczności publicznej oraz biurowce. Sprawdź nasze realizacje."
+  metaImage=""
+  keywords="architektura, projekty architektoniczne, unicorn architecture, dom prywatny, biurowiec, dworzec, realizacje architektoniczne, Polska, Poznań"
+  withTitle={true}
+>
+  <HeaderTitle slot="header-title" isLink={false} title="projekty" />
+
+  <main class="main">
+    <Projects />
+  </main>
+</Layout>
