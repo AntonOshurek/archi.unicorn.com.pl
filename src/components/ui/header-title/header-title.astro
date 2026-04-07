@@ -1,4 +1,6 @@
 ---
+//ICONS
+import ArrowIcon from './icons/arrow-icon.astro';
 //STYLES
 import './header-title.css';
 
@@ -15,6 +17,7 @@ const { title, isLink = false, href = '/' } = Astro.props;
   {
     isLink ? (
       <a href={href} class="header-title__link">
+        <ArrowIcon iconSize={40} />
         {title}
       </a>
     ) : (
