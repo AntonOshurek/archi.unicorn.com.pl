@@ -1,10 +1,7 @@
 .header {
+  grid-column: 1/-1;
   width: 100%;
   background-color: var(--background-color);
-}
-
-.header--default-layout {
-  grid-column: 1/-1;
 }
 
 .header--fixed {
@@ -27,10 +24,4 @@
   position: relative;
   z-index: var(--header-controls-index);
   max-width: max-content;
-}
-
-.header__titles {
-  display: flex;
-  align-items: center;
-  padding: var(--basic-side-padding);
 }
