@@ -1,4 +1,4 @@
-.projects-card {
+.project-card {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -10,14 +10,26 @@
   }
 }
 
-.projects-card__link {
+.project-card__info-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content min-content;
+  height: max-content;
+  gap: 20px;
+}
+
+.project-card__link {
+  position: absolute;
+  left: 0;
+  top: 0;
   display: flex;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
 }
 
-.projects-card__info-block {
-}
-
-.projects-card__title {
+.project-card__title {
   font-weight: 400;
   font-size: 22px;
   text-align: center;
@@ -30,7 +42,15 @@
   }
 }
 
-.projects-card__image {
+.project-card__info {
+  font-weight: 400;
+  font-size: 18px;
+  text-align: left;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+.project-card__image {
   display: flex;
   width: 100%;
   height: 100%;

@@ -10,14 +10,19 @@ interface Props {
 const { project } = Astro.props;
 ---
 
-<article class="projects-card">
-  <div class="projects-card__info-block">
-    <h3 class="projects-card__title">{project.data.title}</h3>
-    <!--<a class="projects__link" href=`projekt/${project.slug}/index.html`> link</a>-->
+<article class="project-card">
+  <div class="project-card__info-block">
+    <h3 class="project-card__title">{project.data.title}</h3>
+    <div class="project-card__info">
+      <p>{project.data.location}</p>
+      <p>{project.data.year}</p>
+    </div>
+
+    <a class="project-card__link" href=`projekt/${project.id}/index.html`></a>
   </div>
 
   <img
-    class="projects-card__image lazyload"
+    class="project-card__image lazyload"
     loading="lazy"
     width="100"
     height="300"
