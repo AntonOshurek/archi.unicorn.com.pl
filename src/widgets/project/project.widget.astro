@@ -2,6 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 //COMPONENTS
 import ProjectGallery from '@components/ui/project-gallery/project-gallery.astro';
+import ProjectOverview from '@components/ui/project-overview/project-overview.astro';
 //STYLES
 import './project.widget.css';
 
@@ -14,5 +15,5 @@ const { project } = Astro.props;
 
 <div class="project-widget">
   <ProjectGallery project={project} />
-  <!--  project info-->
+  <ProjectOverview project={project} />
 </div>
