@@ -1,0 +1,68 @@
+---
+import type { CollectionEntry } from 'astro:content';
+//STYLES
+import './project-overview.css';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+---
+
+<section class="project-overview">
+  <header class="project-overview__header">
+    <h1 class="project-overview__title">
+      {project.data.title}
+    </h1>
+
+    <p class="project-overview__sub-title">
+      {project.data.location}
+      <br />
+      {project.data.year}
+    </p>
+  </header>
+
+  <main class="project-overview__body">
+    <p class="project-overview__description">
+      {project.data.description}
+    </p>
+
+    <dl class="project-overview__details">
+      <div class="project-overview__detail-wrap">
+        <dt>Lokalizacja:</dt>
+        <dd>{project.data.location}</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Architekci:</dt>
+        <dd>Kuba Pawlak, Grzegorz Pawlak</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Konstrukcje:</dt>
+        <dd>Excepteur sint</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Instalacje:</dt>
+        <dd>Officia deserunt</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Inwestor:</dt>
+        <dd>Cupidatat non proident</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Projekt:</dt>
+        <dd>2016-2018</dd>
+      </div>
+
+      <div class="project-overview__detail-wrap">
+        <dt>Realizacja:</dt>
+        <dd>{project.data.year}</dd>
+      </div>
+    </dl>
+  </main>
+</section>

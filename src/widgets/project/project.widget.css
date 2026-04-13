@@ -1,5 +1,10 @@
 .project-widget {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 500px min-content;
+  grid-template-rows: 400px min-content;
+  gap: 50px;
+
+  @media (width <= 900px) {
+    grid-template-rows: 1fr min-content;
+  }
 }
