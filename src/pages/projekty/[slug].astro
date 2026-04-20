@@ -30,6 +30,8 @@ type Props = {
 };
 
 const { project } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout
@@ -43,7 +45,7 @@ const { project } = Astro.props;
     slot="header-title"
     isLink={true}
     title="Projekty"
-    href="/projekty"
+    href=`${base}/projekty`
   />
 
   <main class="main">

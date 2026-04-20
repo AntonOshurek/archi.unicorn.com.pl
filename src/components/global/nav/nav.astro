@@ -3,14 +3,16 @@
 import './nav.css';
 //COMPONENTS
 import Item from './item/item.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <nav class="nav">
   <h2 class="visually-hidden">Nawigacja po stronie Unicorn arhitekte</h2>
 
   <ul class="nav__list">
-    <Item title="Home" path="/" />
-    <Item title="Projekty" path="/projekty" />
-    <Item title="Kontakt" path="/kontakt" />
+    <Item title="Home" path={base} />
+    <Item title="Projekty" path={`${base}/projekty`} />
+    <Item title="Kontakt" path={`${base}/kontakt`} />
   </ul>
 </nav>
