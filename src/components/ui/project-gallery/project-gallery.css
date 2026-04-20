@@ -5,6 +5,7 @@
 
   --swiper-navigation-color: var(--secondary-text-color);
   --swiper-pagination-color: var(--secondary-text-color);
+  --swiper-navigation-size: 30px;
 }
 
 .post__image {

@@ -19,6 +19,9 @@
       ],
       "@widgets/*": [
         "src/widgets/*"
+      ],
+      "@shared/*": [
+        "src/shared/*"
       ]
     }
   }

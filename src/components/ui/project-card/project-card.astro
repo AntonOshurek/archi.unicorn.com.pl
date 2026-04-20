@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+//CONSTANTS
+import { ROUTING } from '@shared/variables/routing';
 //STYLES
 import './project-card.css';
 
@@ -8,17 +10,21 @@ interface Props {
 }
 
 const { project } = Astro.props;
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <article class="project-card">
   <div class="project-card__info-block">
     <h3 class="project-card__title">{project.data.title}</h3>
     <div class="project-card__info">
-      <p>{project.data.location}</p>
+      <p class="project-card__location">{project.data.location}</p>
       <p>{project.data.year}</p>
     </div>
 
-    <a class="project-card__link" href=`projekty/${project.id}/index.html`></a>
+    <a
+      class="project-card__link"
+      href={ROUTING.PROJECT.computedPath(project.id)}></a>
   </div>
 
   <img
