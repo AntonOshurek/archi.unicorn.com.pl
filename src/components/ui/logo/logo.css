@@ -1,11 +1,7 @@
 .logo {
   z-index: var(--header-logo-index);
-  width: 300px;
+  width: 250px;
   fill: var(--standard-black);
-
-  @media (width <= 900px) {
-    width: 350px;
-  }
 }
 
 .logo--index-page {
