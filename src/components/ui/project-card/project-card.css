@@ -16,7 +16,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: min-content min-content;
   height: max-content;
-  gap: 20px;
+  gap: 10px;
 }
 
 .project-card__link {
@@ -48,6 +48,11 @@
   text-align: left;
   text-transform: uppercase;
   color: var(--secondary-text-color);
+}
+
+.project-card__location {
+  font-style: italic;
+  text-transform: capitalize;
 }
 
 .project-card__image {
