@@ -1,11 +1,13 @@
 ---
 //LOGOTYPES
 import LogoHorizontal from './logo-icons/logo-horizontal.astro';
+//CONSTANTS
+import { ROUTING } from '@shared/variables/routing';
 //STYLES
 import './logo.css';
 
 const base = import.meta.env.BASE_URL;
-const isIndexPage = Astro.url.pathname === `${base}/`;
+const isIndexPage = Astro.url.pathname === ROUTING.ROOT.path;
 ---
 
 <LogoHorizontal additionalClass={isIndexPage ? 'logo--index-page' : ''} />

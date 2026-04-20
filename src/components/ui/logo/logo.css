@@ -1,6 +1,6 @@
 .logo {
   z-index: var(--header-logo-index);
-  width: 400px;
+  width: 300px;
   fill: var(--standard-black);
 
   @media (width <= 900px) {

@@ -1,5 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+//CONSTANTS
+import { ROUTING } from '@shared/variables/routing';
 //STYLES
 import './project-card.css';
 
@@ -22,7 +24,7 @@ const base = import.meta.env.BASE_URL;
 
     <a
       class="project-card__link"
-      href=`${base}/projekty/${project.id}/index.html`></a>
+      href={ROUTING.PROJECT.computedPath(project.id)}></a>
   </div>
 
   <img

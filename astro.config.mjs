@@ -8,6 +8,6 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://oshurek.dev', //https://archi.unicorn.com.pl
-  base: '',
+  base: '/',
   integrations: [mdx(), sitemap()],
 });
