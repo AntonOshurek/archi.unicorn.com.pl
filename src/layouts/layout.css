@@ -32,7 +32,13 @@
 }
 
 .body__titles-block {
+  grid-column: 1;
+  grid-row: 2;
   padding: var(--basic-side-padding);
+
+  @media (width <= 900px) {
+    grid-row: 2;
+  }
 }
 
 .body--index-page {

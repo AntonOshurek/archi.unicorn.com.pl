@@ -12,7 +12,7 @@ interface Props {
 
 const { isFixed } = Astro.props;
 
-const computedClasses = `${isFixed ? ' header--fixed' : ''}`;
+const computedClasses = `${isFixed ? ' ' + 'header--fixed' : ''}`;
 ---
 
 <header class=`header${computedClasses}`>
